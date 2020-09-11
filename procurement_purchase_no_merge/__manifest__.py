@@ -11,9 +11,11 @@
     "license": "Other proprietary",
     # 'price: 250.00,
     # 'currency: "EUR",
-    "depends": ["stock", "purchase_stock"],
+    "depends": ["sale_purchase", "sale_stock"],
     "external_dependencies": {"python": [], "bin": []},
-    "data": [],
+    "data": [
+        "views/views.xml",
+    ],
     "qweb": [],
     "demo": [],
     "post_load": None,
