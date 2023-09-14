@@ -4,15 +4,6 @@ from odoo import api, fields, models
 class ProductProduct(models.Model):
     _inherit = "product.product"
 
-    def _match_all_variant_values(self, product_template_attribute_value_ids):
-        """It currently checks that all variant values (`product_template_attribute_value_ids`)
-        are in the product (`self`).
-
-        If multiple values are encoded for the same attribute line, only one of
-        them has to be found on the variant.
-        """
-        self.ensure_one()
-
     def _prepare_sellers(self, params=False):
         self.ensure_one()
         res = super()._prepare_sellers(params)
